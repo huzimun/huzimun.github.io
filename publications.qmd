@@ -4,25 +4,23 @@ title: "Publications"
 
 # Publications
 
-共 3 篇，按年份倒序排列。由 `refs.bib` 自动生成（运行 `python bib2qmd.py` 更新）。
+共 4 篇，按年份倒序排列。由 `refs.bib` 自动生成（运行 `python bib2qmd.py` 更新）。
 
 ## Journal Articles
 
-- **Deep Learning for Vision Tasks: A Survey**  
-  Your Name, Coauthor Name  
-  *Journal of Example Research*, 1, (2), 1–20, 2025  
-  [DOI](https://doi.org/10.1000/example.2025)
+- **Targeted ensemble defense against unauthorized text-to-image identity customization**  
+  **M. Hu**, Y. Tu, D. Tu, L. Wang  
+  *Information Fusion*, 103696, 2025  
+- **Adversarial attacks and defenses on text-to-image diffusion models: A survey**  
+  C. Zhang, **M. Hu**, W. Li, L. Wang  
+  *Information Fusion*, 114, 102701, 2025  
+- **Toward Chinese food understanding: A cross-modal ingredient-level benchmark**  
+  L. Wang, C. Zhang, A. Liu, B. Yang, **M. Hu**, X. Qiao, L. Wang, J. He, Q. Liu  
+  *IEEE Transactions on Multimedia*, 27, 2863–2874, 2024  
 
 ## Conference Papers
 
-- **A Novel Approach to Sample Problem**  
-  Your Name, Coauthor Name  
-  *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)*, 100–110, 2025  
-  [DOI](https://doi.org/10.1000/cvpr.2025)
-
-## Preprints
-
-- **Working Paper Title**  
-  Your Name  
-  **, 2026  
+- **ConNEF: An Encryption Framework for Deep Neural Network IP Protection**  
+  L. Wang, **M. Hu**, S. Xu, M. Zhao, J. Chang  
+  *Companion Proceedings of the ACM on Web Conference 2025*, 1351–1354, 2025  
 

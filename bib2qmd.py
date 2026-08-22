@@ -24,17 +24,22 @@ def clean_field(value: str) -> str:
     return re.sub(r"\s+", " ", value.replace("{", "").replace("}", "")).strip()
 
 
-def format_authors(author_str: str) -> str:
+def format_authors(author_str: str, me_lastnames=("hu",)) -> str:
     """将 'Lastname, Firstname and ...' 格式化为 'F. Lastname, ...' 并加粗本人姓名"""
     names = [n.strip() for n in author_str.split(" and ") if n.strip()]
     formatted = []
     for name in names:
         if "," in name:
             last, first = name.split(",", 1)
+            last = last.strip()
             initials = " ".join(f"{p[0]}." for p in first.strip().split() if p)
-            formatted.append(f"{initials} {last.strip()}")
+            item = f"{initials} {last}"
         else:
-            formatted.append(name)
+            item = name
+            last = name.split()[-1] if name.split() else ""
+        if last.lower() in me_lastnames:
+            item = f"**{item}**"
+        formatted.append(item)
     return ", ".join(formatted)
 
 

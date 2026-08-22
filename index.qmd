@@ -27,6 +27,19 @@ I am a graduate student at the [School of New Media and Communication, Tianjin U
 - **Computer Vision** — image recognition, object detection
 - **研究方向3** — 请替换为你的研究方向
 
+## Selected Publications {#publications}
+
+- **Targeted ensemble defense against unauthorized text-to-image identity customization**
+  **M. Hu**, Y. Tu, D. Tu, L. Wang — *Information Fusion*, 2025
+- **Adversarial attacks and defenses on text-to-image diffusion models: A survey**
+  C. Zhang, **M. Hu**, W. Li, L. Wang — *Information Fusion*, 2025
+- **ConNEF: An Encryption Framework for Deep Neural Network IP Protection**
+  L. Wang, **M. Hu**, S. Xu, M. Zhao, J. Chang — *Companion Proceedings of the ACM on Web Conference 2025*
+- **Toward Chinese food understanding: A cross-modal ingredient-level benchmark**
+  L. Wang, C. Zhang, A. Liu, B. Yang, **M. Hu**, et al. — *IEEE Transactions on Multimedia*, 2024
+
+完整列表见 [Publications](publications.qmd)。
+
 ## News {#news}
 
 - **2026.08** — Personal academic homepage launched
