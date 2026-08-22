@@ -2,8 +2,6 @@
 title: "Publications"
 ---
 
-# Publications
-
 ## Journal Articles
 
 - **Targeted ensemble defense against unauthorized text-to-image identity customization.**  

@@ -138,8 +138,6 @@ def main():
         'title: "Publications"\n',
         "---\n",
         "\n",
-        "# Publications\n",
-        "\n",
     ]
 
     for key in ORDER:

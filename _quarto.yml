@@ -14,7 +14,7 @@ website:
   repo-actions: [edit, issue]
 
   navbar:
-    title: "Mingwang Hu"
+    title: false
     left:
       - href: index.qmd
         text: Home

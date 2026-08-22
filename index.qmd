@@ -1,11 +1,7 @@
----
-title: "Mingwang Hu"
----
-
 ::: {.hero-banner}
 # Mingwang Hu {.hero-title}
 
-![Portrait](assets/img/avatar.png){.rounded-circle width="160px"}
+![](assets/img/avatar.png){.rounded-circle width="160px"}
 
 [![Email](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:humingwang@tju.edu.cn)
 [![Google Scholar](https://img.shields.io/badge/Scholar-4285F4?style=flat-square&logo=googlescholar&logoColor=white)](https://scholar.google.com/citations?user=XiVJkjMAAAAJ&hl=zh-CN)
@@ -32,21 +28,18 @@ I am currently pursuing my Ph.D. degree at Tianjin University.
 - **Adversarial attacks and defenses on text-to-image diffusion models: A survey.**
   C. Zhang, **M. Hu**, W. Li, L. Wang — *Information Fusion*, 2025
 
-完整列表见 [Publications](publications.qmd)。
+See [Publications](publications.qmd) for the full list.
 
 ## News {#news}
 
 - **2025** — [Targeted ensemble defense against unauthorized text-to-image identity customization](publications.qmd) (first-author) accepted to *Information Fusion*
 - **2025** — [ConNEF: An Encryption Framework for Deep Neural Network IP Protection](publications.qmd) (second-author) accepted to *WWW 2025 Companion*
 - **2025** — [Adversarial attacks and defenses on text-to-image diffusion models: A survey](publications.qmd) (second-author) accepted to *Information Fusion*
-- **2026.08** — Personal academic homepage launched
-- **2026** — Started Ph.D. studies at Tianjin University
-- **2023** — Started master's studies at Tianjin University
 
 ## Education {#education}
 
-| 时间 | 学校 | 专业 | 学位 |
-|------|------|------|------|
-| 2026 – Present | 天津大学 | 电子信息 | 博士在读 |
-| 2023 – 2026 | 天津大学 | 计算机技术 | 硕士 |
-| 2019 – 2023 | 中国海洋大学 | 计算机科学与技术 | 学士 |
+| Period | Institution | Major | Degree |
+|--------|-------------|-------|--------|
+| 2026 – Present | Tianjin University | Electronic Information | Ph.D. |
+| 2023 – 2026 | Tianjin University | Computer Technology | M.S. |
+| 2019 – 2023 | Ocean University of China | Computer Science and Technology | B.S. |
