@@ -1,0 +1,45 @@
+---
+title: "YOUR NAME"
+---
+
+::: {.hero-banner}
+# YOUR NAME {.hero-title}
+
+Ph.D. Candidate @[天津大学](https://www.tju.edu.cn/)
+
+Tianjin, China
+
+[![Email](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:your.email@example.com)
+[![Google Scholar](https://img.shields.io/badge/Scholar-4285F4?style=flat-square&logo=googlescholar&logoColor=white)](https://scholar.google.com/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/YOUR_USERNAME)
+[![ORCID](https://img.shields.io/badge/ORCID-A6CE39?style=flat-square&logo=orcid&logoColor=white)](https://orcid.org/)
+:::
+
+## About Me {#about-me}
+
+I am a graduate student at [天津大学 (Tianjin University)](https://www.tju.edu.cn/), working on
+machine learning and computer vision. My research focuses on developing
+efficient algorithms for real-world applications.
+
+## Research Interests {#research-interests}
+
+- **Machine Learning** — deep learning, representation learning
+- **Computer Vision** — image recognition, object detection
+- **研究方向3** — 请替换为你的研究方向
+
+## News {#news}
+
+- **2026.08** — Personal academic homepage launched
+- **2025.XX** — Paper accepted at XXX conference
+- **2024.XX** — Started graduate studies at Tianjin University
+
+## Education {#education}
+
+| 时间 | 学校 | 专业 | 学位 |
+|------|------|------|------|
+| 2024 – Present | 天津大学 | 计算机科学与技术 | 硕士 |
+| 2020 – 2024 | 请替换 | 请替换 | 学士 |
+
+::: {.callout-note appearance="simple" icon=false}
+替换说明：请将本页所有 `YOUR NAME`、`YOUR_USERNAME`、邮箱、研究方向等占位符替换为你的真实信息。头像图片放置于 `assets/img/avatar.jpg`。
+:::

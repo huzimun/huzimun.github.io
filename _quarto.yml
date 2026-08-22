@@ -1,0 +1,50 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - index.qmd
+    - publications.qmd
+    - cv.qmd
+
+website:
+  title: "YOUR NAME"
+  description: "Personal Academic Homepage"
+  site-url: https://YOUR_USERNAME.github.io
+  repo-url: https://github.com/YOUR_USERNAME/YOUR_USERNAME.github.io
+  repo-actions: [edit, issue]
+
+  navbar:
+    title: "YOUR NAME"
+    left:
+      - href: index.qmd
+        text: Home
+      - href: publications.qmd
+        text: Publications
+      - href: cv.qmd
+        text: CV
+    right:
+      - icon: google
+        href: https://scholar.google.com/
+        aria-label: Google Scholar
+      - icon: github
+        href: https://github.com/YOUR_USERNAME
+        aria-label: GitHub
+      - icon: envelope
+        href: mailto:your.email@example.com
+        aria-label: Email
+
+  page-footer:
+    left: "© 2026 YOUR NAME. All rights reserved."
+    right: "Built with [Quarto](https://quarto.org)"
+
+format:
+  html:
+    theme: cosmo
+    css: assets/css/styles.css
+    math: mathjax
+    toc: true
+    toc-depth: 3
+    link-external-newwindow: true
+    highlight-style: github
+
+bibliography: refs.bib

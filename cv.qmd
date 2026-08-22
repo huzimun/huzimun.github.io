@@ -1,0 +1,46 @@
+---
+title: "Curriculum Vitae"
+---
+
+# Curriculum Vitae {#curriculum-vitae}
+
+[Download PDF](files/cv.pdf){.btn .btn-primary}
+
+## Education {#education}
+
+**天津大学 (Tianjin University)** — 天津，中国
+:   *Master of Engineering, Computer Science and Technology*
+    2024 – 2027 (expected)
+
+**请替换本科院校**
+:   *Bachelor of XX*
+    2020 – 2024
+
+## Research Interests {#research-interests}
+
+Machine Learning, Computer Vision, [请替换]
+
+## Publications {#publications}
+
+See [Publications](publications.qmd) page for full list.
+
+## Skills {#skills}
+
+- **Programming**: Python, PyTorch, C++
+- **Tools**: LaTeX, Git, Linux
+- **Languages**: 中文（母语），English (IELTS X.X)
+
+## Awards & Honors {#awards-honors}
+
+- 2025 — 请替换奖项名称
+- 2024 — 请替换奖项名称
+
+## Academic Service {#academic-service}
+
+- Reviewer: [请替换期刊/会议名称]
+
+---
+
+::: {.callout-note appearance="simple" icon=false}
+替换说明：请修改以上占位内容为你的真实 CV 信息。完整版 PDF 简历请放置于 `files/cv.pdf`。
+:::

@@ -1,0 +1,28 @@
+---
+title: "Publications"
+---
+
+# Publications
+
+共 3 篇，按年份倒序排列。由 `refs.bib` 自动生成（运行 `python bib2qmd.py` 更新）。
+
+## Journal Articles
+
+- **Deep Learning for Vision Tasks: A Survey**  
+  Your Name, Coauthor Name  
+  *Journal of Example Research*, 1, (2), 1–20, 2025  
+  [DOI](https://doi.org/10.1000/example.2025)
+
+## Conference Papers
+
+- **A Novel Approach to Sample Problem**  
+  Your Name, Coauthor Name  
+  *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)*, 100–110, 2025  
+  [DOI](https://doi.org/10.1000/cvpr.2025)
+
+## Preprints
+
+- **Working Paper Title**  
+  Your Name  
+  **, 2026  
+
