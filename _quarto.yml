@@ -9,8 +9,8 @@ project:
 website:
   title: "YOUR NAME"
   description: "Personal Academic Homepage"
-  site-url: https://YOUR_USERNAME.github.io
-  repo-url: https://github.com/YOUR_USERNAME/YOUR_USERNAME.github.io
+  site-url: https://huzimun.github.io
+  repo-url: https://github.com/huzimun/huzimun.github.io
   repo-actions: [edit, issue]
 
   navbar:
@@ -27,7 +27,7 @@ website:
         href: https://scholar.google.com/
         aria-label: Google Scholar
       - icon: github
-        href: https://github.com/YOUR_USERNAME
+        href: https://github.com/huzimun
         aria-label: GitHub
       - icon: envelope
         href: mailto:your.email@example.com

@@ -1,6 +1,10 @@
 # Quarto build output
 /_site/
 /.quarto/
+/site_libs/
+
+# WorkBuddy internal
+/.workbuddy/
 
 # Legacy Quarto installer remnant (to be deleted manually)
 /quarto/
