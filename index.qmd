@@ -7,10 +7,6 @@ title: "Mingwang Hu"
 
 ![Portrait](assets/img/avatar.png){.rounded-circle width="160px"}
 
-School of New Media and Communication @[天津大学](https://www.tju.edu.cn/)
-
-Tianjin, China
-
 [![Email](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:humingwang@tju.edu.cn)
 [![Google Scholar](https://img.shields.io/badge/Scholar-4285F4?style=flat-square&logo=googlescholar&logoColor=white)](https://scholar.google.com/citations?user=XiVJkjMAAAAJ&hl=zh-CN)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/huzimun)
@@ -19,7 +15,7 @@ Tianjin, China
 
 ## About Me {#about-me}
 
-I am a graduate student at the [School of New Media and Communication, Tianjin University](https://www.tju.edu.cn/).
+I am currently pursuing my Ph.D. degree at Tianjin University.
 
 ## Research Interests {#research-interests}
 
@@ -29,14 +25,12 @@ I am a graduate student at the [School of New Media and Communication, Tianjin U
 
 ## Selected Publications {#publications}
 
-- **Targeted ensemble defense against unauthorized text-to-image identity customization**
+- **Targeted ensemble defense against unauthorized text-to-image identity customization.**
   **M. Hu**, Y. Tu, D. Tu, L. Wang — *Information Fusion*, 2025
-- **Adversarial attacks and defenses on text-to-image diffusion models: A survey**
-  C. Zhang, **M. Hu**, W. Li, L. Wang — *Information Fusion*, 2025
-- **ConNEF: An Encryption Framework for Deep Neural Network IP Protection**
+- **ConNEF: An Encryption Framework for Deep Neural Network IP Protection.**
   L. Wang, **M. Hu**, S. Xu, M. Zhao, J. Chang — *Companion Proceedings of the ACM on Web Conference 2025*
-- **Toward Chinese food understanding: A cross-modal ingredient-level benchmark**
-  L. Wang, C. Zhang, A. Liu, B. Yang, **M. Hu**, et al. — *IEEE Transactions on Multimedia*, 2024
+- **Adversarial attacks and defenses on text-to-image diffusion models: A survey.**
+  C. Zhang, **M. Hu**, W. Li, L. Wang — *Information Fusion*, 2025
 
 完整列表见 [Publications](publications.qmd)。
 
@@ -46,15 +40,13 @@ I am a graduate student at the [School of New Media and Communication, Tianjin U
 - **2025** — [ConNEF: An Encryption Framework for Deep Neural Network IP Protection](publications.qmd) (second-author) accepted to *WWW 2025 Companion*
 - **2025** — [Adversarial attacks and defenses on text-to-image diffusion models: A survey](publications.qmd) (second-author) accepted to *Information Fusion*
 - **2026.08** — Personal academic homepage launched
-- **2024** — Started graduate studies at Tianjin University
+- **2026** — Started Ph.D. studies at Tianjin University
+- **2023** — Started master's studies at Tianjin University
 
 ## Education {#education}
 
 | 时间 | 学校 | 专业 | 学位 |
 |------|------|------|------|
-| 2024 – Present | 天津大学 | 计算机科学与技术 | 硕士 |
-| 2020 – 2024 | 请替换 | 请替换 | 学士 |
-
-::: {.callout-note appearance="simple" icon=false}
-替换说明：请将本页研究方向、本科院校、奖项等占位符替换为你的真实信息。头像已使用 `assets/img/avatar.png`。
-:::
+| 2026 – Present | 天津大学 | 电子信息 | 博士在读 |
+| 2023 – 2026 | 天津大学 | 计算机技术 | 硕士 |
+| 2019 – 2023 | 中国海洋大学 | 计算机科学与技术 | 学士 |

@@ -82,7 +82,7 @@ def entry_to_markdown(entry: dict) -> str:
     url = clean_field(entry.get("url", ""))
     pdf = clean_field(entry.get("pdf", ""))  # 支持自定义 pdf 字段
 
-    line = f"- **{title}**  \n  {authors}  \n  "
+    line = f"- **{title}.**  \n  {authors}  \n  "
     venue_parts = [p for p in [f"*{venue}*", vol, f"({num})" if num else "", pages] if p]
     line += ", ".join(venue_parts)
     if year:
@@ -139,8 +139,6 @@ def main():
         "---\n",
         "\n",
         "# Publications\n",
-        "\n",
-        f"共 {len(entries)} 篇，按年份倒序排列。由 `{args.bib}` 自动生成（运行 `python bib2qmd.py` 更新）。\n",
         "\n",
     ]
 
