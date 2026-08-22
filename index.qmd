@@ -23,9 +23,9 @@ I am a graduate student at the [School of New Media and Communication, Tianjin U
 
 ## Research Interests {#research-interests}
 
-- **Machine Learning** — deep learning, representation learning
-- **Computer Vision** — image recognition, object detection
-- **研究方向3** — 请替换为你的研究方向
+- **AI Security** — adversarial attacks and defenses, deep neural network IP protection
+- **Multimodal Large Models** — cross-modal understanding, vision-language models
+- **Visual Generative Models** — text-to-image diffusion models, identity customization and its safety
 
 ## Selected Publications {#publications}
 
@@ -42,9 +42,11 @@ I am a graduate student at the [School of New Media and Communication, Tianjin U
 
 ## News {#news}
 
+- **2025** — [Targeted ensemble defense against unauthorized text-to-image identity customization](publications.qmd) (first-author) accepted to *Information Fusion*
+- **2025** — [ConNEF: An Encryption Framework for Deep Neural Network IP Protection](publications.qmd) (second-author) accepted to *WWW 2025 Companion*
+- **2025** — [Adversarial attacks and defenses on text-to-image diffusion models: A survey](publications.qmd) (second-author) accepted to *Information Fusion*
 - **2026.08** — Personal academic homepage launched
-- **2025.XX** — Paper accepted at XXX conference
-- **2024.XX** — Started graduate studies at Tianjin University
+- **2024** — Started graduate studies at Tianjin University
 
 ## Education {#education}
 
