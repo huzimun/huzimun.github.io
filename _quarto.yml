@@ -7,14 +7,14 @@ project:
     - cv.qmd
 
 website:
-  title: "YOUR NAME"
+  title: "Mingwang Hu"
   description: "Personal Academic Homepage"
   site-url: https://huzimun.github.io
   repo-url: https://github.com/huzimun/huzimun.github.io
   repo-actions: [edit, issue]
 
   navbar:
-    title: "YOUR NAME"
+    title: "Mingwang Hu"
     left:
       - href: index.qmd
         text: Home
@@ -24,7 +24,7 @@ website:
         text: CV
     right:
       - icon: google
-        href: https://scholar.google.com/
+        href: https://scholar.google.com/citations?user=XiVJkjMAAAAJ&hl=zh-CN
         aria-label: Google Scholar
       - icon: github
         href: https://github.com/huzimun
@@ -34,7 +34,7 @@ website:
         aria-label: Email
 
   page-footer:
-    left: "© 2026 YOUR NAME. All rights reserved."
+    left: "© 2026 Mingwang Hu. All rights reserved."
     right: "Built with [Quarto](https://quarto.org)"
 
 format:
