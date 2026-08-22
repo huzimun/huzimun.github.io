@@ -32,9 +32,9 @@ See [Publications](publications.qmd) for the full list.
 
 ## News {#news}
 
-- **2025** — [Targeted ensemble defense against unauthorized text-to-image identity customization](publications.qmd) (first-author) accepted to *Information Fusion*
-- **2025** — [ConNEF: An Encryption Framework for Deep Neural Network IP Protection](publications.qmd) (second-author) accepted to *WWW 2025 Companion*
-- **2025** — [Adversarial attacks and defenses on text-to-image diffusion models: A survey](publications.qmd) (second-author) accepted to *Information Fusion*
+- **2025** — [Targeted ensemble defense against unauthorized text-to-image identity customization](https://doi.org/10.1016/j.inffus.2025.103696) (first-author) accepted to *Information Fusion*
+- **2025** — [ConNEF: An Encryption Framework for Deep Neural Network IP Protection](https://doi.org/10.1145/3701716.3715470) (second-author) accepted to *WWW 2025 Companion*
+- **2025** — [Adversarial attacks and defenses on text-to-image diffusion models: A survey](https://doi.org/10.1016/j.inffus.2024.102701) (second-author) accepted to *Information Fusion*
 
 ## Education {#education}
 
