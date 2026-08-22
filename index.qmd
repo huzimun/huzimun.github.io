@@ -5,11 +5,13 @@ title: "Mingwang Hu"
 ::: {.hero-banner}
 # Mingwang Hu {.hero-title}
 
+![Portrait](assets/img/avatar.png){.rounded-circle width="160px"}
+
 School of New Media and Communication @[天津大学](https://www.tju.edu.cn/)
 
 Tianjin, China
 
-[![Email](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:your.email@example.com)
+[![Email](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:humingwang@tju.edu.cn)
 [![Google Scholar](https://img.shields.io/badge/Scholar-4285F4?style=flat-square&logo=googlescholar&logoColor=white)](https://scholar.google.com/citations?user=XiVJkjMAAAAJ&hl=zh-CN)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/huzimun)
 [![ORCID](https://img.shields.io/badge/ORCID-A6CE39?style=flat-square&logo=orcid&logoColor=white)](https://orcid.org/)
@@ -39,5 +41,5 @@ I am a graduate student at the [School of New Media and Communication, Tianjin U
 | 2020 – 2024 | 请替换 | 请替换 | 学士 |
 
 ::: {.callout-note appearance="simple" icon=false}
-替换说明：请将本页所有 `YOUR NAME`、`YOUR_USERNAME`、邮箱、研究方向等占位符替换为你的真实信息。头像图片放置于 `assets/img/avatar.jpg`。
+替换说明：请将本页研究方向、本科院校、奖项等占位符替换为你的真实信息。头像已使用 `assets/img/avatar.png`。
 :::

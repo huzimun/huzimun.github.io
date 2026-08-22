@@ -13,7 +13,7 @@
 ├── bib2qmd.py             # BibTeX → 论文页 转换脚本
 ├── assets/
 │   ├── css/styles.css     # 自定义样式
-│   └── img/avatar.jpg     # 头像（请替换为自己的照片）
+│   └── img/avatar.png     # 头像（请替换为自己的照片）
 ├── files/                 # 存放 cv.pdf、论文 PDF
 └── .github/workflows/publish.yml  # GitHub Actions 自动部署
 ```

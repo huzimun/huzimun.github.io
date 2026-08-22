@@ -30,7 +30,7 @@ website:
         href: https://github.com/huzimun
         aria-label: GitHub
       - icon: envelope
-        href: mailto:your.email@example.com
+        href: mailto:humingwang@tju.edu.cn
         aria-label: Email
 
   page-footer:
