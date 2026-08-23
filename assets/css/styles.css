@@ -1,11 +1,21 @@
 /* Academic Homepage Custom Styles */
 
+/* Pin the navbar without reserving the large fixed-nav top gap */
+body.nav-fixed {
+  padding-top: 0 !important;
+}
+#quarto-header {
+  position: sticky !important;
+  top: 0;
+  z-index: 1030;
+}
+
 /* Hero banner on home page */
 .hero-banner {
   text-align: center;
-  padding: 1.2rem 1rem 0.8rem 1rem;
+  padding: 0.3rem 1rem 0.5rem 1rem;
   border-bottom: 1px solid #e5e7eb;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .hero-title {
@@ -20,14 +30,22 @@
   font-size: 1.05rem;
   font-weight: 500;
   color: #4a5568;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.4rem;
 }
 
 .hero-banner img {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #e5e7eb;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Tighten vertical rhythm inside the hero block */
+.hero-banner p {
+  margin-bottom: 0.3rem;
+}
+.hero-banner p:last-child {
+  margin-bottom: 0;
 }
 
 /* Publication entry styling */
