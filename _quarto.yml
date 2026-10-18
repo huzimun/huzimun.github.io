@@ -3,44 +3,29 @@ project:
   output-dir: _site
   render:
     - index.qmd
-    - publications.qmd
 
 website:
-  title: "Mingwang Hu"
-  description: "Personal Academic Homepage"
+  title: "Mingwang Hu · 胡明望"
+  description: "Mingwang Hu is a Ph.D. student at Tianjin University, working on AI security, multimodal LLMs, and visual generative models."
   site-url: https://huzimun.github.io
-  repo-url: https://github.com/huzimun/huzimun.github.io
-
-  navbar:
-    title: false
-    left:
-      - href: index.qmd
-        text: Home
-      - href: publications.qmd
-        text: Publications
-    right:
-      - icon: google
-        href: https://scholar.google.com/citations?user=XiVJkjMAAAAJ&hl=zh-CN
-        aria-label: Google Scholar
-      - icon: github
-        href: https://github.com/huzimun
-        aria-label: GitHub
-      - icon: envelope
-        href: mailto:humingwang@tju.edu.cn
-        aria-label: Email
-
-  page-footer:
-    left: "© 2026 Mingwang Hu. All rights reserved."
-    right: "Built with [Quarto](https://quarto.org)"
+  search: false
 
 format:
   html:
-    theme: cosmo
-    css: assets/css/styles.css
-    math: mathjax
-    toc: true
-    toc-depth: 3
+    theme: none
+    minimal: true
+    css: assets/css/academic.css
+    toc: false
     link-external-newwindow: true
-    highlight-style: github
-
-bibliography: refs.bib
+    include-in-header:
+      - text: |
+          <meta name="theme-color" content="#f8f9f6">
+          <link rel="icon" type="image/png" href="assets/img/avatar.png">
+          <meta property="og:title" content="Mingwang Hu · Academic Homepage">
+          <meta property="og:description" content="Ph.D. student at Tianjin University working on AI security, multimodal LLMs, and visual generative models.">
+          <meta property="og:type" content="website">
+          <meta property="og:image" content="https://huzimun.github.io/assets/img/avatar.png">
+    include-after-body:
+      - file: page.html
+      - text: |
+          <script src="assets/js/academic.js" defer></script>
