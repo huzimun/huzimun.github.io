@@ -3,14 +3,16 @@
 bib2qmd.py — 从 refs.bib 生成首页的论文区块
 
 用法:
-    python bib2qmd.py                 # 读取 refs.bib，更新 page.html
+    python bib2qmd.py                 # 读取 refs.bib，更新 page.html(英) 与 zh.html(中)
     python bib2qmd.py --bib my.bib    # 指定其他 bib 文件
+    python bib2qmd.py --pages zh.html:zh          # 只更新中文页
     python bib2qmd.py --dry-run       # 只打印统计，不写文件
 
-脚本会替换 page.html 中两段被注释标记包裹的区块：
-    <!-- BEGIN:SELECTED --> ... <!-- END:SELECTED -->   精选论文
+脚本会替换页面中两段被注释标记包裹的区块：
+    <!-- BEGIN:SELECTED --> ... <!-- END:SELECTED -->   代表性论文
     <!-- BEGIN:ALL -->      ... <!-- END:ALL -->        按年份分组的完整列表
-并同步更新标题旁的篇数徽章。
+并同步更新标题旁的篇数徽章。中英两页共用同一份 refs.bib，中文页的
+摘要取 summary_zh（缺省回退 summary），作者角色按 role_map 自动翻译。
 
 依赖: pip install bibtexparser
 """
@@ -27,6 +29,38 @@ except ImportError:
     sys.exit(1)
 
 ARROW = '<span aria-hidden="true">↗</span>'
+
+# 页面语言配置：同一份 refs.bib 可以同时渲染英文页和中文页
+LANG = {
+    "en": {
+        "paper": "Paper",
+        "code": "Code",
+        "link": "Link",
+        "pdf": "PDF",
+        "summary_field": "summary",
+        "role_map": {},
+        "empty_selected": '<p class="empty-state">No selected publications yet.</p>',
+        "empty_all": '<p class="empty-state">No publications yet.</p>',
+        "sep": ": ",
+    },
+    "zh": {
+        "paper": "论文",
+        "code": "代码",
+        "link": "链接",
+        "pdf": "PDF",
+        "summary_field": "summary_zh",
+        "role_map": {
+            "first author": "第一作者",
+            "second author": "第二作者",
+            "third author": "第三作者",
+            "co-first author": "共同第一作者",
+            "corresponding author": "通讯作者",
+        },
+        "empty_selected": '<p class="empty-state">暂无代表性论文。</p>',
+        "empty_all": '<p class="empty-state">暂无论文。</p>',
+        "sep": "：",
+    },
+}
 
 SECTION_TITLES = {
     "article": "Journal Articles",
@@ -128,20 +162,40 @@ def venue_label(entry) -> str:
     return clean_field(entry_get(entry, "howpublished"))
 
 
-def links_for(entry):
+def links_for(entry, lang: str = "en"):
     """返回 [(url, label), ...]"""
+    labels = LANG[lang]
     links = []
     doi = clean_field(entry_get(entry, "doi"))
     url = clean_field(entry_get(entry, "url"))
     pdf = clean_field(entry_get(entry, "pdf"))
     if doi:
-        links.append((f"https://doi.org/{doi}", "Paper"))
+        links.append((f"https://doi.org/{doi}", labels["paper"]))
     if url:
-        label = "Code" if "github.com" in url.lower() else "Link"
+        label = labels["code"] if "github.com" in url.lower() else labels["link"]
         links.append((url, label))
     if pdf:
-        links.append((pdf, "PDF"))
+        links.append((pdf, labels["pdf"]))
     return links
+
+
+def role_label(entry, lang: str = "en") -> str:
+    """角色标签，中文页按 role_map 翻译，未命中则保留原文"""
+    raw = clean_field(entry_get(entry, "role"))
+    if not raw:
+        return ""
+    if lang == "en":
+        return raw
+    return LANG[lang]["role_map"].get(raw.lower(), raw)
+
+
+def summary_for(entry, lang: str = "en") -> str:
+    """一句话摘要：中文页优先取 summary_zh，缺省回退英文 summary"""
+    if lang != "en":
+        text = clean_field(entry_get(entry, LANG[lang]["summary_field"]))
+        if text:
+            return text
+    return clean_field(entry_get(entry, "summary"))
 
 
 def anchor(url: str, inner: str, aria: str = "") -> str:
@@ -155,15 +209,15 @@ def anchor(url: str, inner: str, aria: str = "") -> str:
 # --------------------------------------------------------------------------- #
 # HTML 片段
 # --------------------------------------------------------------------------- #
-def article_html(entry, *, selected: bool) -> str:
+def article_html(entry, *, selected: bool, lang: str = "en") -> str:
     key = clean_field(entry_get(entry, "ID"))
     title = esc(entry_get(entry, "title", "Untitled"))
     authors = format_authors(clean_field(entry_get(entry, "author")))
     venue = esc(venue_label(entry))
-    role = esc(entry_get(entry, "role"))
-    summary = esc(entry_get(entry, "summary"))
+    role = esc(role_label(entry, lang))
+    summary = esc(summary_for(entry, lang))
     year = clean_field(entry_get(entry, "year"))
-    links = links_for(entry)
+    links = links_for(entry, lang)
 
     prefix = "selected" if selected else "paper"
     dom_id = f"{prefix}-{key}" if key else ""
@@ -194,31 +248,34 @@ def article_html(entry, *, selected: bool) -> str:
     if selected and summary:
         parts.append(f'<p class="paper-summary">{summary}</p>')
     if links:
+        sep = LANG[lang]["sep"]
         items = "".join(
-            anchor(u, f"{lbl} {ARROW}", aria=f"{lbl}: {title}") for u, lbl in links
+            anchor(u, f"{lbl} {ARROW}", aria=f"{lbl}{sep}{title}") for u, lbl in links
         )
         parts.append(f'<div class="paper-links">{items}</div>')
     parts.append("</div></article>")
     return "".join(p for p in parts if p)
 
 
-def build_selected(entries) -> str:
+def build_selected(entries, lang: str = "en") -> str:
     picked = [e for e in entries if is_true(entry_get(e, "selected"))]
     if not picked:
-        return '<p class="empty-state">No selected publications yet.</p>'
-    return "\n".join(article_html(e, selected=True) for e in picked)
+        return LANG[lang]["empty_selected"]
+    return "\n".join(article_html(e, selected=True, lang=lang) for e in picked)
 
 
-def build_all(entries) -> str:
+def build_all(entries, lang: str = "en") -> str:
     if not entries:
-        return '<p class="empty-state">No publications yet.</p>'
+        return LANG[lang]["empty_all"]
     by_year = {}
     for e in entries:
         by_year.setdefault(clean_field(entry_get(e, "year")) or "—", []).append(e)
 
     blocks = []
     for year in sorted(by_year, key=lambda y: (y == "—", y), reverse=True):
-        articles = "\n".join(article_html(e, selected=False) for e in by_year[year])
+        articles = "\n".join(
+            article_html(e, selected=False, lang=lang) for e in by_year[year]
+        )
         blocks.append(
             '<div class="publication-year" data-year-group="">'
             f'<h3 class="year-heading">{html.escape(year)}</h3>'
@@ -252,9 +309,27 @@ def replace_count(text: str, which: str, count: int) -> str:
 def main():
     parser = argparse.ArgumentParser(description="BibTeX -> homepage publication blocks")
     parser.add_argument("--bib", default="refs.bib", help="BibTeX 文件 (默认 refs.bib)")
-    parser.add_argument("--page", default="page.html", help="目标页面 (默认 page.html)")
+    parser.add_argument(
+        "--pages",
+        default="page.html:en,zh.html:zh",
+        help="目标页面及语言，逗号分隔 file:lang (默认 page.html:en,zh.html:zh)",
+    )
+    parser.add_argument(
+        "--page", default=None, help="只更新单个页面（英文），等价于 --pages file:en"
+    )
     parser.add_argument("--dry-run", action="store_true", help="只统计，不写文件")
     args = parser.parse_args()
+
+    if args.page:
+        targets = [(args.page, "en")]
+    else:
+        targets = []
+        for item in args.pages.split(","):
+            item = item.strip()
+            if not item:
+                continue
+            name, _, lang = item.partition(":")
+            targets.append((name, lang or "en"))
 
     try:
         entries_raw = load_bib(args.bib)
@@ -271,8 +346,6 @@ def main():
         if not entry_get(e, "ID") and isinstance(e, dict):
             e["ID"] = re.sub(r"\W+", "-", clean_field(entry_get(e, "title"))[:40]).strip("-").lower()
 
-    selected_html = build_selected(entries)
-    all_html = build_all(entries)
     selected_count = sum(1 for e in entries if is_true(entry_get(e, "selected")))
 
     print(f"共 {len(entries)} 篇文献，其中精选 {selected_count} 篇")
@@ -284,22 +357,31 @@ def main():
         print("\n(--dry-run，未写入文件)")
         return
 
-    try:
-        with open(args.page, "r", encoding="utf-8") as f:
-            page = f.read()
-    except FileNotFoundError:
-        print(f"错误: 找不到文件 {args.page}")
+    written = 0
+    for page_name, lang in targets:
+        if lang not in LANG:
+            print(f"警告: 未知语言 {lang!r}，跳过 {page_name}")
+            continue
+        try:
+            with open(page_name, "r", encoding="utf-8") as f:
+                page = f.read()
+        except FileNotFoundError:
+            print(f"跳过: 找不到文件 {page_name}")
+            continue
+
+        page = replace_block(page, "SELECTED", build_selected(entries, lang), page_name)
+        page = replace_block(page, "ALL", build_all(entries, lang), page_name)
+        page = replace_count(page, "selected", selected_count)
+        page = replace_count(page, "all", len(entries))
+
+        with open(page_name, "w", encoding="utf-8") as f:
+            f.write(page)
+        print(f"✅ 已更新 {page_name} ({lang})")
+        written += 1
+
+    if not written:
+        print("错误: 没有更新任何页面")
         sys.exit(1)
-
-    page = replace_block(page, "SELECTED", selected_html, args.page)
-    page = replace_block(page, "ALL", all_html, args.page)
-    page = replace_count(page, "selected", selected_count)
-    page = replace_count(page, "all", len(entries))
-
-    with open(args.page, "w", encoding="utf-8") as f:
-        f.write(page)
-
-    print(f"\n✅ 已更新 {args.page}")
 
 
 if __name__ == "__main__":

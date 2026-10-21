@@ -3,6 +3,8 @@ project:
   output-dir: _site
   render:
     - index.qmd
+  resources:
+    - zh.html
 
 website:
   title: "Mingwang Hu · 胡明望"
