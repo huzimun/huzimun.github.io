@@ -8,7 +8,7 @@ project:
 
 website:
   title: "Mingwang Hu · 胡明望"
-  description: "Mingwang Hu is a Ph.D. student at Tianjin University, working on AI security, multimodal LLMs, and visual generative models."
+  description: "Mingwang Hu is a Ph.D. student at Tianjin University, working on AI security, embodied intelligence, and visual reasoning."
   site-url: https://huzimun.github.io
   search: false
 
@@ -24,7 +24,7 @@ format:
           <meta name="theme-color" content="#f8f9f6">
           <link rel="icon" type="image/png" href="assets/img/avatar.png">
           <meta property="og:title" content="Mingwang Hu · Academic Homepage">
-          <meta property="og:description" content="Ph.D. student at Tianjin University working on AI security, multimodal LLMs, and visual generative models.">
+          <meta property="og:description" content="Ph.D. student at Tianjin University working on AI security, embodied intelligence, and visual reasoning.">
           <meta property="og:type" content="website">
           <meta property="og:image" content="https://huzimun.github.io/assets/img/avatar.png">
     include-after-body:
